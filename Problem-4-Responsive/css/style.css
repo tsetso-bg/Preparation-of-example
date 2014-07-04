@@ -1,0 +1,175 @@
+
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: #fff;
+  border: 10px solid;
+  border-color:  #90EE90;
+}
+.header div {
+  width: 100%;
+  float: left;
+}
+
+.header div img{
+  margin-left: 0;
+}
+
+.footer {
+  background: #fff;
+  border: 10px solid;
+  border-color:  #90EE90;
+}
+
+.main {
+  text-align: left;
+  background: #fff;
+  border: 10px solid;
+  border-color:  #90EE90;
+}
+.main div{
+ 
+  background: #C7FBC7;
+ margin: 0 auto;
+}
+h2  {
+  padding: 10px;
+  margin: 10px;
+}
+.data{
+  padding: 20px;
+  padding-top: 0; 
+}
+.aside-1 {
+  background: gold;
+}
+
+.aside-2{
+  background: #fff;
+  border: 10px solid;
+  border-color:  #90EE90;
+}
+
+  .aside-2 div{
+    width: 100%;
+  }
+
+   .aside-2 div img{
+     
+   }
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+ .aside-2 div{
+    width: 50%;
+     float: left;
+  }
+
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 12 0px; }
+  /*.aside-1 { order: 1; }*/ 
+  .main    { order: 1; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+
+   .header div {
+  width: 50%;
+  }
+   .aside-2 div{
+    width: 50%;
+    float: none;
+   
+  }
+}
+
+
+
+
+/*----N A V I G A C H I Y A*/
+.navigation {
+  list-style: none;
+  margin: 0; 
+  
+  background: #fff;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 0.7em;
+  color: #000;
+  background: #C7FBC7;
+  margin: 10px;
+}
+
+
+.navigation a:hover {
+  background: darken(deepskyblue, 2%);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+    
+  }
+  .navigation a {
+     margin: 0;
+  }
+
+  .footer {
+  border: 0;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+  .footer {
+  border: 0;
+  }
+}
